@@ -2,31 +2,49 @@
   {
     "slug": "kyoto-japan",
     "name": "Kyoto, Japan",
+    "type": "city",
     "image": "images/trending-kyoto.jpg",
-    "type": "city"
+    "rating": 4.9,
+    "reviews": 9850
   },
   {
     "slug": "new-zealand",
     "name": "New Zealand",
+    "type": "country",
     "image": "images/trending-new-zealand.jpg",
-    "type": "country"
+    "rating": 4.8,
+    "reviews": 15200
   },
   {
     "slug": "amsterdam-netherlands",
     "name": "Amsterdam, Netherlands",
+    "type": "city",
     "image": "images/trending-amsterdam.jpg",
-    "type": "city"
+    "rating": 4.7,
+    "reviews": 11240
   },
   {
     "slug": "thailand",
     "name": "Thailand",
+    "type": "country",
     "image": "images/trending-thailand.jpg",
-    "type": "country"
+    "rating": 4.7,
+    "reviews": 25300
   },
   {
     "slug": "seoul-south-korea",
     "name": "Seoul, South Korea",
+    "type": "city",
     "image": "images/trending-seoul.jpg",
-    "type": "city"
+    "rating": 4.8,
+    "reviews": 8760
+  },
+  {
+    "slug": "egypt",
+    "name": "Egypt",
+    "type": "country",
+    "image": "images/trending-egypt.jpg",
+    "rating": 4.6,
+    "reviews": 7500
   }
 ]

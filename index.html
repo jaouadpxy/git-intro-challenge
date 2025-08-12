@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Browse destinations by continent, country, or city. See deals, reviews, and build AI-powered itineraries.">
+    <meta property="og:title" content="DiscoverTriply | Explore Destinations, Plan Smarter, Travel Better">
+    <meta property="og:description" content="Find the right destination, plan smarter, and book with confidence.">
+    <meta property="og:image" content="images/og-hero-image.jpg">
     <title>DiscoverTriply | Explore Destinations, Plan Smarter, Travel Better</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -34,7 +37,7 @@
                 <p class="sub-headline">Find the right destination, plan smarter, and book with confidence.</p>
                 <div class="hero-ctas">
                     <a href="/explore/continents" class="cta-button primary">Start Exploring →</a>
-                    <a href="#" class="cta-button secondary">I’m Feeling Adventurous</a>
+                    <a href="#" id="adventurous-cta" class="cta-button secondary">I’m Feeling Adventurous</a>
                 </div>
                 <div class="planner-bar">
                     <input type="text" placeholder="Country ▾">
@@ -49,14 +52,14 @@
         <section class="inspiration-chips-section">
             <div class="container">
                 <div class="chip-row">
-                    <a href="#" class="chip">Tokyo</a>
-                    <a href="#" class="chip">Paris</a>
-                    <a href="#" class="chip">Bangkok</a>
-                    <a href="#" class="chip">Bali</a>
-                    <a href="#" class="chip">Luxury Vibes</a>
-                    <a href="#" class="chip">Food & Culture</a>
-                    <a href="#" class="chip">Solo Adventure</a>
-                    <a href="#" class="chip">Hidden Gems</a>
+                    <a href="/explore/cities?q=Tokyo" class="chip">Tokyo</a>
+                    <a href="/explore/cities?q=Paris" class="chip">Paris</a>
+                    <a href="/explore/cities?q=Bangkok" class="chip">Bangkok</a>
+                    <a href="/explore/cities?q=Bali" class="chip">Bali</a>
+                    <a href="/explore?style=luxury" class="chip">Luxury Vibes</a>
+                    <a href="/explore?style=food-culture" class="chip">Food & Culture</a>
+                    <a href="/explore?style=solo-adventure" class="chip">Solo Adventure</a>
+                    <a href="/explore?style=hidden-gems" class="chip">Hidden Gems</a>
                 </div>
             </div>
         </section>
@@ -115,7 +118,10 @@
 
         <section class="browse-category-section">
             <div class="container">
-                <h2>Browse by Category</h2>
+                <div class="section-header">
+                    <h2>Browse by Category</h2>
+                    <p class="section-subtitle">Find destinations that match your travel style.</p>
+                </div>
                 <div class="chip-row" id="category-filters">
                     <button class="chip active" data-category="all">All</button>
                     <button class="chip" data-category="relax">Relax</button>
@@ -126,24 +132,7 @@
                     <button class="chip" data-category="nightlife">Nightlife</button>
                 </div>
                 <div class="category-grid" id="category-grid">
-                    <a href="#" class="category-card" data-category="adventure">
-                        <h4>Adventure</h4>
-                    </a>
-                    <a href="#" class="category-card" data-category="relax">
-                        <h4>Beaches</h4>
-                    </a>
-                    <a href="#" class="category-card" data-category="culture">
-                        <h4>Museums</h4>
-                    </a>
-                    <a href="#" class="category-card" data-category="food-drink">
-                        <h4>Fine Dining</h4>
-                    </a>
-                    <a href="#" class="category-card" data-category="nature">
-                        <h4>Hiking</h4>
-                    </a>
-                    <a href="#" class="category-card" data-category="nightlife">
-                        <h4>Live Music</h4>
-                    </a>
+                    <!-- Category cards will be injected here by JavaScript -->
                 </div>
             </div>
         </section>

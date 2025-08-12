@@ -2,9 +2,71 @@ document.addEventListener('DOMContentLoaded', () => {
     loadFeaturedDestinations();
     loadWeeklyDeals();
     setupStatCounterAnimation();
-    setupCategoryFilter();
+    loadBrowseByCategory(); // Replaces setupCategoryFilter here
     loadTrendingNow();
+    setupAdventurousCta();
 });
+
+function setupAdventurousCta() {
+    const cta = document.getElementById('adventurous-cta');
+    if (!cta) return;
+
+    const destinations = [
+        '/explore/cities?q=Kyoto',
+        '/explore/cities?q=New-Zealand',
+        '/explore/cities?q=Amsterdam',
+        '/explore?style=adventure',
+        '/explore/cities?q=Seoul',
+        '/explore/cities?q=Rome'
+    ];
+
+    cta.addEventListener('click', (e) => {
+        e.preventDefault();
+        const randomDestination = destinations[Math.floor(Math.random() * destinations.length)];
+        // In a real app, you would navigate. Here we'll log it.
+        console.log(`Navigating to random destination: ${randomDestination}`);
+        // window.location.href = randomDestination;
+    });
+}
+
+async function loadBrowseByCategory() {
+    try {
+        const response = await fetch('data/categories.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const categories = await response.json();
+        const grid = document.getElementById('category-grid');
+        if (!grid) return;
+
+        grid.innerHTML = ''; // Clear existing content
+        categories.forEach(category => {
+            const card = document.createElement('a');
+            card.className = 'category-card';
+            card.href = category.link;
+            card.setAttribute('data-category', category.slug);
+            card.innerHTML = `
+                <div class="category-card-icon">
+                    <img src="${category.icon}" alt="${category.name} icon" aria-label="${category.name} icon">
+                </div>
+                <h4>${category.name}</h4>
+                <p>${category.description}</p>
+                <span class="card-cta">Explore Now →</span>
+            `;
+            grid.appendChild(card);
+        });
+
+        // Now that cards are loaded, setup the filter
+        setupCategoryFilter();
+
+    } catch (error) {
+        console.error('Failed to load categories:', error);
+        const grid = document.getElementById('category-grid');
+        if (grid) {
+            grid.innerHTML = '<p>Could not load categories. Please try again later.</p>';
+        }
+    }
+}
 
 async function loadTrendingNow() {
     try {

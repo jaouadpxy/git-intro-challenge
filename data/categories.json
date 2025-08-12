@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "relax",
+    "name": "Relax",
+    "description": "Unwind in serene destinations and tranquil getaways.",
+    "icon": "/icons/relax.svg",
+    "link": "/explore/cities?style=relax"
+  },
+  {
+    "slug": "food-drink",
+    "name": "Food & Drink",
+    "description": "Savor local flavors and culinary adventures.",
+    "icon": "/icons/food.svg",
+    "link": "/explore/cities?style=food"
+  },
+  {
+    "slug": "culture",
+    "name": "Culture",
+    "description": "Immerse yourself in history, art, and local traditions.",
+    "icon": "/icons/culture.svg",
+    "link": "/explore/cities?style=culture"
+  },
+  {
+    "slug": "adventure",
+    "name": "Adventure",
+    "description": "Seek thrills with activities like hiking, climbing, and more.",
+    "icon": "/icons/adventure.svg",
+    "link": "/explore/cities?style=adventure"
+  },
+  {
+    "slug": "nature",
+    "name": "Nature",
+    "description": "Explore breathtaking landscapes and natural wonders.",
+    "icon": "/icons/nature.svg",
+    "link": "/explore/cities?style=nature"
+  },
+  {
+    "slug": "nightlife",
+    "name": "Nightlife",
+    "description": "Discover the best spots for after-dark entertainment.",
+    "icon": "/icons/nightlife.svg",
+    "link": "/explore/cities?style=nightlife"
+  }
+]

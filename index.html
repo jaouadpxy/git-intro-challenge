@@ -1,25 +1,260 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <!-- The title appears as the browser tab name -->
-    <title>My Website</title>
-    <!-- We can specify style (CSS) with the style tag -->
-    <style>
-    body {
-      background: #ccc;
-      text-align: center;
-    }
-    h1 {
-      color: blue;
-    }
-    </style>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse destinations by continent, country, or city. See deals, reviews, and build AI-powered itineraries.">
+    <title>DiscoverTriply | Explore Destinations, Plan Smarter, Travel Better</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="global-header">
+        <div class="header-logo">
+            <a href="/">DiscoverTriply</a>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Plan</a></li>
+                <li><a href="#">Inspiration</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#" class="cta-button">Start Planning</a>
+            <a href="#">Language</a>
+            <a href="#">Search</a>
+            <a href="#">Sign In</a>
+        </div>
+    </header>
 
-  <body>
-    <!-- The style elements above will affect how this content is displayed -->
-    <!-- How will style apply here? -->
-    <h1>Hello and welcome</h1>
-    <p>This is my introduction...</p>
-  </body>
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>DiscoverTriply — Your Ultimate Travel Discovery Platform</h1>
+                <p class="sub-headline">Find the right destination, plan smarter, and book with confidence.</p>
+                <div class="hero-ctas">
+                    <a href="/explore/continents" class="cta-button primary">Start Exploring →</a>
+                    <a href="#" class="cta-button secondary">I’m Feeling Adventurous</a>
+                </div>
+                <div class="planner-bar">
+                    <input type="text" placeholder="Country ▾">
+                    <input type="text" placeholder="City ▾">
+                    <input type="text" placeholder="Experience ▾">
+                    <button class="search-button">Search</button>
+                </div>
+                <p class="trust-microcopy">Trusted by 1.2M+ travelers • 450k+ local reviews • 98% satisfaction</p>
+            </div>
+        </section>
+
+        <section class="inspiration-chips-section">
+            <div class="container">
+                <div class="chip-row">
+                    <a href="#" class="chip">Tokyo</a>
+                    <a href="#" class="chip">Paris</a>
+                    <a href="#" class="chip">Bangkok</a>
+                    <a href="#" class="chip">Bali</a>
+                    <a href="#" class="chip">Luxury Vibes</a>
+                    <a href="#" class="chip">Food & Culture</a>
+                    <a href="#" class="chip">Solo Adventure</a>
+                    <a href="#" class="chip">Hidden Gems</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="best-deals-section">
+            <div class="container">
+                <h2>Best Deals This Week</h2>
+                <div class="deals-carousel" id="deals-carousel">
+                    <!-- Deal cards will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-destinations-section">
+            <div class="container">
+                <h2>Featured Destinations</h2>
+                <div class="destination-grid" id="destination-grid">
+                    <!-- Destination cards will be injected here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-section">
+            <div class="container">
+                <h2>Why Travelers Trust DiscoverTriply</h2>
+                <div class="trust-grid">
+                    <div class="stat-counter">
+                        <span class="stat-number" data-target="1200000">0</span>
+                        <p>trips planned</p>
+                    </div>
+                    <div class="stat-counter">
+                        <span class="stat-number" data-target="450000">0</span>
+                        <p>local reviews</p>
+                    </div>
+                    <div class="stat-counter">
+                        <span class="stat-number" data-target="98">0</span>%
+                        <p>traveler satisfaction</p>
+                    </div>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>Curated & Up-to-date Guides</h3>
+                        <p>Our team of experts ensures every recommendation is top-notch.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Real Reviews & Ratings</h3>
+                        <p>Honest feedback from our community of millions of travelers.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Smart Planning Tools</h3>
+                        <p>Build your perfect itinerary with our easy-to-use tools.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="browse-category-section">
+            <div class="container">
+                <h2>Browse by Category</h2>
+                <div class="chip-row" id="category-filters">
+                    <button class="chip active" data-category="all">All</button>
+                    <button class="chip" data-category="relax">Relax</button>
+                    <button class="chip" data-category="food-drink">Food & Drink</button>
+                    <button class="chip" data-category="culture">Culture</button>
+                    <button class="chip" data-category="adventure">Adventure</button>
+                    <button class="chip" data-category="nature">Nature</button>
+                    <button class="chip" data-category="nightlife">Nightlife</button>
+                </div>
+                <div class="category-grid" id="category-grid">
+                    <a href="#" class="category-card" data-category="adventure">
+                        <h4>Adventure</h4>
+                    </a>
+                    <a href="#" class="category-card" data-category="relax">
+                        <h4>Beaches</h4>
+                    </a>
+                    <a href="#" class="category-card" data-category="culture">
+                        <h4>Museums</h4>
+                    </a>
+                    <a href="#" class="category-card" data-category="food-drink">
+                        <h4>Fine Dining</h4>
+                    </a>
+                    <a href="#" class="category-card" data-category="nature">
+                        <h4>Hiking</h4>
+                    </a>
+                    <a href="#" class="category-card" data-category="nightlife">
+                        <h4>Live Music</h4>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-slot" style="width:100%;max-width:970px;height:250px;background:#f4f4f4;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;margin:32px auto;border-radius:14px;">
+            <span style="color:#999;font-size:14px;">Ad Space — 970×250</span>
+        </div>
+
+        <section class="pro-planner-section">
+            <div class="container">
+                <h2>Plan Smarter with DiscoverTriply Pro</h2>
+                <div class="comparison-grid">
+                    <div class="plan-column free-plan">
+                        <h3>Free</h3>
+                        <ul>
+                            <li>Save favorites</li>
+                            <li>Basic itinerary</li>
+                            <li>Email reminders</li>
+                        </ul>
+                    </div>
+                    <div class="plan-column pro-plan">
+                        <h3>Pro</h3>
+                        <ul>
+                            <li>AI-crafted itineraries</li>
+                            <li>Offline access</li>
+                            <li>Budget optimizer</li>
+                            <li>Export to PDF/Maps</li>
+                        </ul>
+                        <a href="#" class="cta-button">Try Pro for Free</a>
+                    </div>
+                </div>
+                <div class="testimonials">
+                    <div class="testimonial-mini">
+                        <p>"The AI planner is a game-changer! Saved me hours of research."</p>
+                        <span>- Alex R. ★★★★★</span>
+                    </div>
+                    <div class="testimonial-mini">
+                        <p>"Found so many hidden gems I would have missed otherwise."</p>
+                        <span>- Jordan P. ★★★★★</span>
+                    </div>
+                    <div class="testimonial-mini">
+                        <p>"Offline maps were a lifesaver when I had no signal."</p>
+                        <span>- Casey L. ★★★★★</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trending-now-section">
+            <div class="container">
+                <h2>Trending Now</h2>
+                <p class="section-subtitle">Most searched destinations this week</p>
+                <div class="deals-carousel" id="trending-carousel">
+                    <!-- Trending cards will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-slot" style="width:100%;max-width:970px;height:250px;background:#f4f4f4;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;margin:32px auto;border-radius:14px;">
+            <span style="color:#999;font-size:14px;">Ad Space — 970×250</span>
+        </div>
+
+        <section class="newsletter-section">
+            <div class="container">
+                <h3>Get weekly travel deals & hidden gems.</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit" class="cta-button">Subscribe</button>
+                </form>
+                <p class="gdpr-note">By subscribing, you agree to our Privacy Policy.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="global-footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>DiscoverTriply</h4>
+                <p>Your ultimate travel discovery platform.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Most Visited</h4>
+                <ul>
+                    <li><a href="#">Tokyo, Japan</a></li>
+                    <li><a href="#">Paris, France</a></li>
+                    <li><a href="#">Bali, Indonesia</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Affiliate Disclosure: Some links may be affiliate links, earning us a commission at no extra cost to you.</p>
+            <p>&copy; 2024 DiscoverTriply. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
 </html>

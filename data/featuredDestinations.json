@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "tokyo-japan",
+    "name": "Tokyo, Japan",
+    "type": "city",
+    "image": "images/featured-tokyo.jpg",
+    "rating": 4.8,
+    "reviews": 1200,
+    "badge": "Top Destination",
+    "teaser": "Experience the vibrant culture and futuristic technology of Tokyo."
+  },
+  {
+    "slug": "paris-france",
+    "name": "Paris, France",
+    "type": "city",
+    "image": "images/featured-paris.jpg",
+    "rating": 4.7,
+    "reviews": 1500,
+    "badge": "Local Favorite",
+    "teaser": "Discover romance and art in the heart of the City of Light."
+  },
+  {
+    "slug": "bali-indonesia",
+    "name": "Bali, Indonesia",
+    "type": "country",
+    "image": "images/featured-bali.jpg",
+    "rating": 4.9,
+    "reviews": 2500,
+    "badge": "Top Destination",
+    "teaser": "Relax on pristine beaches and explore ancient temples."
+  },
+  {
+    "slug": "rome-italy",
+    "name": "Rome, Italy",
+    "type": "city",
+    "image": "images/featured-rome.jpg",
+    "rating": 4.6,
+    "reviews": 1800,
+    "badge": "Local Favorite",
+    "teaser": "Walk through history in the eternal city."
+  }
+]

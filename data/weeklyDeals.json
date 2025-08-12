@@ -1,0 +1,37 @@
+[
+  {
+    "image": "images/deal-tokyo.jpg",
+    "title": "3-Night Tokyo City Break",
+    "priceFrom": 799,
+    "discount": "-20%",
+    "affiliateUrl": "#"
+  },
+  {
+    "image": "images/deal-paris.jpg",
+    "title": "5-Night Paris & Rome Combo",
+    "priceFrom": 1299,
+    "discount": "-30%",
+    "affiliateUrl": "#"
+  },
+  {
+    "image": "images/deal-bali.jpg",
+    "title": "7-Night Bali Beach Resort",
+    "priceFrom": 999,
+    "discount": "-25%",
+    "affiliateUrl": "#"
+  },
+  {
+    "image": "images/deal-greece.jpg",
+    "title": "Greek Islands Hopping Adventure",
+    "priceFrom": 1499,
+    "discount": "-15%",
+    "affiliateUrl": "#"
+  },
+  {
+    "image": "images/deal-new-york.jpg",
+    "title": "4-Night New York Explorer",
+    "priceFrom": 899,
+    "discount": "-20%",
+    "affiliateUrl": "#"
+  }
+]

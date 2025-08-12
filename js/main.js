@@ -46,9 +46,7 @@ async function loadBrowseByCategory() {
             card.href = category.link;
             card.setAttribute('data-category', category.slug);
             card.innerHTML = `
-                <div class="category-card-icon">
-                    <img src="${category.icon}" alt="${category.name} icon" aria-label="${category.name} icon">
-                </div>
+                <div class="category-card-icon" aria-label="${category.name} icon"></div>
                 <h4>${category.name}</h4>
                 <p>${category.description}</p>
                 <span class="card-cta">Explore Now →</span>
